@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ONLINE CAB BOOKING</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            function start()
+            {
+               alert("Please allow cookies");
+               document.getElementById("move").addEventListener("mousemove",moveone,false);
+               document.getElementById("move").addEventListener("mouseout",leaveone,false);
+               document.getElementById("picture").addEventListener("mouseout",out,false);
+               document.getElementById("picture").addEventListener("mouseover",mouseover,false);
+            }
+            function moveone(){
+                document.getElementById("move").innerHTML="CABS AVAILABLE:";
+            }
+            function leaveone(){
+                document.getElementById("move").innerHTML="AVAILE YOUR CABS:";
+            }
+            function out(e){
+                e.target.setAttribute("src","kovai.jpg");
+            }
+            function mouseover(e)
+            {
+                document.getElementById("picture").setAttribute("src","cbe.jpg");
+            }
+            window.addEventListener("load",start,false);
+        </script>
+    </head>
+    <style>
+        .bottom{
+           background-color:#202A44;
+           color: bisque;
+           text-align: center;
+        }
+        .i{
+            background-color:#3AAFA9;
+        }
+        
+        .abt{
+            background-color: #D1E8E2;
+        }
+        .b{
+            background-color: #88BDBC;
+        }
+        .c{
+            background-color: #3AAFA9;
+        }   
+    </style>
+    </head>
+        <body>
+             <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+                <div class="container-fluid">
+                    <a class="navbar-brand"><img src="onlinelogomaker-030923-2148-3045-500.jpg" height="50%" width="50%"  style="float:left;width:20px;height:20px;"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">HOME</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          TRIPS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown" >
+                          <li><a class="dropdown-item" href="outstation.html">OUT STATIONS</a></li>
+                          <li><a class="dropdown-item" href="corporate.html">CO-OPERATIVE</a></li>
+                          <li><a class="dropdown-item" href="rental.html">RENTAL</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">ABOUT US</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contact.html">CONTACT US</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+           <div class="card">
+            <img src="carheader.jpg" height="400px" width="100%" style="opacity: 90%;" class="card-img">
+            <div class="card-body">
+            <h3 class="card-img-overlay text-white" style="padding-top:200px;font-family: Lucida Handwriting ;">MOVE ON,<br>AS WE!</h3>
+           </div>
+        </div>
+        </div>
+        <div class="container-fluid c" >
+            <h1><p style="text-align: center; color: black;" id="move" onmousemove="moveone()">We are here for you:)</p></h1>
+            <div class="row">
+                <div class="col-sm">
+                    <img src="swift-removebg-preview.jpg" height="90%" width="90%" >
+                </div>
+                <div class="col-sm">
+                    <img src="omni-removebg-preview.jpg" width="90%" height="90%">
+                </div>
+                <div class="col-sm">
+                    <img src="innova-removebg-preview.jpg" width="90%" height="90%">
+                </div>
+                <div class="col-sm">
+                    <img src="taigo-removebg-preview.jpg" width="90%" height="90%">
+                </div>
+            </div>
+            <div class="form-group">
+                <center><a href="formsboot.html"><button type="button" class="btn btn-outline-warning btn-md">CHOOSE ME:)</button></a></center>
+            </div>
+            <div class="abt">
+            <p><h2 style="text-align: center;">Why to choose us?</h2></p>
+            <p><h4 style="text-align: center;"><ins>QUICK BOOKING</ins></h4></p>
+            <p style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"><center>Speeds up the process of booking yourself a ride with ease and without compromising on your valuable seconds.</center></p>
+            <p><h4><ins><h4 style="text-align: center;">POCKET FRIENDLY</h4></ins></h4></p>
+            <p style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"><center>cost saving offer promotion service makes your in-app experience really a pocket friendly one.</center></p>
+            <p><h4><ins><h4 style="text-align: center;">USER FRIENDLY</h4></ins></h4></p>
+            <p style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"><center>The Great design & perfect responsiveness will make sure of you having one of the best Intuitive User Experience ever.</center></p>
+            </div>
+        </div>
+        <div class="container-fluid" >
+            <h1><p style="text-align: center; color: black; font-family: serif;"><i>WE TRAVELLED WITH YOU:</i></p></h1>
+            <div class="row">
+                <div class="col-sm">
+                    <img src="kerala.jpg" height="90%" width="90%" >
+                </div>
+                <div class="col-sm">
+                    <img src="pondy.jpg" width="90%" height="90%">
+                </div>
+                <div class="col-sm">
+                    <img src="chennai.webp" width="90%" height="90%">
+                </div>
+                <div class="col-sm">
+                    <img src="kodaikanal.jpg" width="90%" height="90%">
+                </div><br>
+                <div class="col-sm">
+                    <img src="ooty.jpg" width="90%" height="90%">
+                </div>
+                <div class="col-sm">
+                    <img src="mysore.jpg" width="90%" height="90%">
+                </div>
+                <div class="col-sm">
+                    <img src="coimbatore.webp" id="picture" width="90%" height="90%">
+                </div>
+                <div class="col-sm">
+                    <img src="kanyakumari.jpg" width="90%" height="90%">
+                </div>
+                <div class="col-sm">
+                    <img src="velankani.jpg" width="90%" height="90%">
+                </div>
+            </div>
+        <div class="row i">
+            <div class="col-4">
+              <h4 style="text-align: center; font-family: Modern Loves;"><ins><i>COMPANY</i></ins></h4>
+              <p><h3 style="text-align: center; font-family: Modern Loves;"><i>Terms of use</i></h3></p>
+              <p><h3 style="text-align: center; font-family: Modern Loves;"><i>Privacy Policy</i></h3></p>
+              <p><h3 style="text-align: center; font-family: Modern Loves;"><i>Faqs</i></h3></p>
+              <p><h3 style="text-align: center; font-family: Modern Loves;"><i>Disclaimer</i></h3></p>
+              <p><h3 style="text-align: center;font-family: Modern Loves;"><i>Support</i></h3></p>
+            </div>
+            <div class="col-4"> 
+                <h4 style="text-align: center; font-family: Modern Loves;"><ins><i>PAY SAFELY WITH US!</i></ins></h4>
+                <p><h3 style="text-align: center; font-family: Modern Loves;"><i>The payment is encrypted and transmitted securely with an SSl protocol</i></h3></p>
+            </div>
+            <div class="col-4">  
+                <h4 style="text-align: center; font-family: Modern Loves;" ><ins><i>CONTACT INFO</i></ins></h4>
+                <p><h3 style="text-align: center; font-family: Modern Loves;"><i>+917443205562</i></h3></p>
+                <p><h3 style="text-align: center;font-family: Modern Loves;"><i>info@cabwetaxi.gmail.com</i></h3></p>
+                <p><h3 style="text-align: center;font-family: Modern Loves;"><i>follow us on</i>  <img src="https://www.redtaxi.co.in/assets/img/icons/play-store-white.svg"></h3></p>
+              
+            </div>
+        </div>
+        <div class="bottom">
+            <p>Feel lucky today!</p>
+            <p><i>avail these from-</i></p>
+            <img src="googleplay.svg">
+            <img src="appstore.svg">
+        </div>
+        <footer>
+            <p style="background-color: black; color: antiquewhite; text-align: center;">&copy;All rights reserved<br>@designed and maintained by Poornashree T</p>
+        </footer>
+    </body>
+</html>

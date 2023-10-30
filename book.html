@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BOOK YOUR CAB!!</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <style>
+            .form-group.c1,
+            .form-group.c2{
+                  display: inline-block;
+                  width: 48%;
+            }
+            .head{
+                background-color: black;
+            }
+        </style>
+        <script>
+            function validate(){
+               var name=document.myform.name.value;
+               var num=document.myform.num.value;
+               var email=document.myform.email.value;
+               var check=document.myform.email.value;
+               var car=document.myform.car;
+               var date=document.myform.date;
+               var add=document.myform.add.value;
+               var members=document.myform.members.value;
+               var from=document.myform.from.value;
+               var to=document.myform.to.value;
+              
+               if(name=="" || name==null){
+                alert("please enter your name");
+                return false;
+               }
+               if(name.length<6){
+                alert("username should be more than 6 characters");
+                return false;
+               }
+
+               if(num=="" || num==null){
+                alert("please enter your mobile number");
+                return false;
+               }
+               if(num.length<10 || num.length>10){
+                alert("please enter a valid mobile number");
+                return false;
+               }
+               if(email=="" || email==null){
+                alert("Please type your email");
+                return false;
+               }
+               if(car.selectedIndex==0){
+                alert("Please select the car you want");
+                return false;
+               }
+               if(date=="" || date==null){
+                alert("please enter the date");
+                return false;
+               }
+               if(add=="" || add==null){
+                alert("please enter your address");2
+                return false;
+               }
+               if(members=="" || members==null){
+                alert("Please enter number of members");
+                return false;
+               }
+               if(from=="" || from==null){
+                alert("enter the from location");
+                return false;
+               }
+               if(to=="" || to==null){
+                alert("Please enter your destination");
+                return false;
+               }
+            }
+            
+            function bubble(e){
+                alert("This will bubble.");
+                e.cancelBubble=false;
+            }
+            function noBubble(e){
+                alert("This will not bubble");
+                e.cancelBubble=true;
+            }
+            function registerEvents(){
+                document.addEventListener("click",documentClick,false);
+                document.getElementById("bubble").addEventListener("click",bubble,false);
+                document.getElementById("noBubble").addEventListener("click",noBubble,false);
+            }
+            window.addEventListener("load",registerEvents,false)
+        </script>
+        <body style="text-align: center;">
+            <div class="head">
+            <p><h1 style="color: beige;" id="nobubble"><i>WELCOME</i></h1></p>
+            <p><h4 style="color: beige;" id="bubble"><i>BOOK HERE!!</i></h4></p>
+        </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="pexels-photo-10865209.jpeg" width="100%" height="100%">
+                </div>
+                <div class="col-lg-6">
+                    <form name="myform" onsubmit="return validate()" method="post" action="http://localhost:7777/login">
+                        <div class="form-group">
+                            <label for="usr">NAME:</label>
+                            <input type="text" class="form-control" id="usr" name="name" placeholder="enter your name"><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="num">PHONE NUMBER:</label>
+                            <input type="text" class="form-control" id="num" name="num" placeholder="enter your mobile number"><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">EMAIL:</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="mail@gmail.com"><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="car">CHOOSE YOUR CAR:</label>
+                            <select name="car" class="form-control" id="car" name="car">
+                                <option selected>SELECT</option>
+                                <option>SWIFT</option>
+                                <option>INNOVA</option>
+                                <option>OMNI</option>
+                                <option>TAIGO</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div class="form-group " >
+                            <label for="date">DATE & TIME:</label>
+                            <input type="datetime-local" class="form-control" id="date" name="date"><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="add">ADDRESS:</label>
+                            <input type="text" class="form-control" id="add" name="add" placeholder="enter your current address"><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="members">MEMBERS:</label>
+                            <input type="number" class="form-control" id="members" name="members"><br>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="from" name="from" placeholder="enter your pickup location"><br>
+                        </div>
+                        <div class="form-group">
+                           <img src="double arrow.png" width="10%" height="10%">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="to" name="to" placeholder="enter your destination location"><br>
+                        </div>
+                        
+                        <div class="form-group" >
+                            <br><input type="submit" class="btn btn-info" formaction="http://localhost:7777/login"/></button>
+                            <input type="submit" name="login" value="save" formaction="http://localhost:7777/save"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </body>
+    </head>
+</html>
