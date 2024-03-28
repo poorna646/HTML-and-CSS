@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>car race</title>
+    <style>
+        /* this is given bcoz to remove gap in 4 sides */
+        html,body{
+            margin:0px;
+        }
+        .playground{
+            /* background-color: black; */
+            color: black;
+            /* to cover full screen  */
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            /* to make it center-click playground div in inspect and go to style click flex and adjust */
+            justify-content: center;
+            position: absolute;
+            z-index: 10;
+        }
+        .car{
+            /* background-color: bisque; */
+            width: 30px;
+            height: 20px;
+            /* to create gap between each car */
+            margin: 2px;
+            /* to start it slow */
+            animation-timing-function: ease-in-out;
+           
+        }
+        #car-1{
+            background: url(./car-1.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        #car-2{
+            background: url(./car-2.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        #car-3{
+            background: url(./car-3.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        #car-4{
+            background: url(./car-4.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        #car-5{
+            background: url(./car-5.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        /* #car-1{
+            animation-name: move;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        } */
+        @keyframes move 
+        {
+            0%{
+                margin-left: 0vw;
+            }            
+            100%{
+                margin-left: 80vw;
+            }
+        }
+        .track{
+            background-color: rgb(165, 243, 136);
+            position: absolute;
+            z-index: 9;
+            width: 100vw;
+            height: 100vh;
+        }
+        .road{
+            background-color: black;
+            height: 80vh;
+            margin-top: 10vh;
+        }
+        .start{
+            height: 100%;
+            width: 60vw;
+            margin-left: 18vw;
+            border-left: 3px solid green;
+            border-right: 3px solid red;
+        }
+        .btn-section{
+            position: absolute;
+            z-index: 11;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+        }
+        button{
+            margin:auto
+        }
+    </style>
+</head>
+<body>
+    <div class="btn-section">
+        <button onclick="start()">start</button>
+    </div>
+    <div class="playground">
+        <!-- .car{$}*5 -->
+        <div class="car" id="car-1"></div>
+        <div class="car" id="car-2"></div>
+        <div class="car" id="car-3"></div>
+        <div class="car" id="car-4"></div>
+        <div class="car" id="car-5"></div>
+
+        <!-- <img src="./car-1.png" class="car" id="car-1"></div>
+        <img src="./car-2.png" class="car" id="car-2"></div>
+        <img src="./car-3.png" class="car" id="car-3"></div>
+        <img src="./car-4.png" class="car" id="car-4"></div>
+        <img src="./car-5.png" class="car" id="car-5"></div> -->
+    </div>
+    <div class="track">
+        <div class="road">
+            <div class="start"></div>
+            
+        </div>
+    </div>
+    <script src="./script.js"> </script>
+</body>
+</html>

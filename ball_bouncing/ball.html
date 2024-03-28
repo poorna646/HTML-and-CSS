@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball_bouncing</title>
+</head>
+<style>
+    html,body{
+        margin:0px;
+    }
+    .upper{
+        background-color: #c7f7ff;
+        width: 100%;
+        height: 500px;        
+    }
+    .grass{
+        background-color: rgb(141, 240, 141);
+        width: 100%;
+        height: 200px;
+    }
+    .upper img{
+        position: absolute;
+        top: 42%;
+        bottom: 0;
+        left: 50%;
+        animation-name: move;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+        animation-direction: alternate;
+    }
+    @keyframes move {
+        0%{
+           top: 60%;
+        }
+        100%{
+            top: 10%;
+        }       
+    }
+</style>
+<body>
+    <div class="back">
+        <div class="upper">
+            <img src="ball.png"  alt="no" style="height: 30%; width: 10%; display: flex;" id="player">                    
+        </div>
+        <div class="grass">
+            
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
