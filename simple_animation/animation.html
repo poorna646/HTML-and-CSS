@@ -1,0 +1,40 @@
+<!-- 1.TRANSITION - goes to another state eg:button
+     2.ANIMATION -  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        p{
+            animation-name:policeSiren;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes policeSiren 
+        {
+            0%{
+                color: red;
+                font-size: small;
+                
+            }
+            50%{
+                color: green;
+            }
+            100%{
+                color: blue;
+                font-size: xx-large;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>poorna</p>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: auto;
+            /* to create gap b/w buttons */
+            margin: 7px; 
+            height: auto;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            /* to make the button curve */
+            border-radius: 5px;
+            text-transform: capitalize;
+            font-family: monospace;
+            box-shadow: 4px 4px 5px rgb(87, 85, 85);
+            border-bottom: 2px solid grey;
+            border-right: 2px solid grey;
+            
+        }
+        .box:active{
+            margin-top: 10px;
+            box-shadow: 2px 2px 5px rgb(87, 85, 85);
+            
+        }
+        .row{
+            display: flex;
+            justify-content: center;
+        }
+        #output{
+            border: 2px solid black;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- div.box{$}*10 -->
+    <div class="row">
+        <div id="output">
+           
+        </div>
+
+    </div>
+    
+    <div class="row">
+        <div class="box" onclick="handleClick(1)">1</div>
+        <div class="box" onclick="handleClick(2)">2</div>
+        <div class="box" onclick="handleClick(3)">3</div>
+    </div>
+
+    <div class="row">
+        <div class="box" onclick="handleClick(4)">4</div>
+        <div class="box" onclick="handleClick(5)">5</div>
+        <div class="box" onclick="handleClick(6)">6</div>
+    </div>
+
+    <div class="row">
+        <div class="box" onclick="handleClick(7)">7</div>
+        <div class="box" onclick="handleClick(8)">8</div>
+        <div class="box" onclick="handleClick(9)">9</div>
+    </div>
+
+    <div class="row">
+        <div class="box" onclick="handleClick(0)">0</div>
+    </div>
+    
+
+    <script>
+        function handleClick(params)
+        {
+            var ele = document.getElementById("output");
+            if(ele.innerText.length<10)
+            {
+                ele.innerText = ele.innerText+params;
+                console.log("clicked ",params);
+            //console.log(ele);
+            }
+            else
+            {
+                console.log("number exceeds");
+            }
+            
+        }
+
+    </script>
+    <!-- after clicking see in console in inspect -->
+    
+    
+</body>
+</html>
